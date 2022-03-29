@@ -1,0 +1,8 @@
+.packageList {
+    display: flex;
+    flex-direction: column;
+}
+
+.packageList > *:not(:last-child) {
+    margin-bottom: 32px;
+}
