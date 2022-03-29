@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { NetPackageComponent } from './net-package/net-package.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
 import { NetPackageListComponent } from './net-package-list/net-package-list.component';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NetPackageListComponent } from './net-package-list/net-package-list.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

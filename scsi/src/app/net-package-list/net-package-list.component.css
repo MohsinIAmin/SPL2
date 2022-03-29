@@ -1,8 +1,22 @@
 .packageList {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-.packageList > *:not(:last-child) {
-    margin-bottom: 32px;
+.packageList>* {
+    box-sizing: border-box;
+}
+
+.packageList>*:not(:last-child) {
+    margin-right: 32px;
+}
+
+.packageListItem {
+    flex: 0 1 calc(33.3% - 32px);
+}
+
+mat-toolbar {
+    justify-content: space-between;
 }
