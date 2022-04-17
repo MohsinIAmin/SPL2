@@ -23,6 +23,12 @@ import { SysPackagesComponent } from './sys-packages/sys-packages.component';
 import { SysCustomersComponent } from './sys-customers/sys-customers.component';
 import { SysComplaintComponent } from './sys-complaint/sys-complaint.component';
 import { SysAccountComponent } from './sys-account/sys-account.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
+import { OperatorPackagesComponent } from './operator-packages/operator-packages.component';
+import { OperatorNewsComponent } from './operator-news/operator-news.component';
+import { OperatorComplaintComponent } from './operator-complaint/operator-complaint.component';
+import { OperatorAccountComponent } from './operator-account/operator-account.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +49,13 @@ import { SysAccountComponent } from './sys-account/sys-account.component';
     SysPackagesComponent,
     SysCustomersComponent,
     SysComplaintComponent,
-    SysAccountComponent
+    SysAccountComponent,
+    LoginFormComponent,
+    SignupFormComponent,
+    OperatorPackagesComponent,
+    OperatorNewsComponent,
+    OperatorComplaintComponent,
+    OperatorAccountComponent
   ],
   imports: [
     BrowserModule,
