@@ -9,13 +9,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { NetPackageListComponent } from './net-package-list/net-package-list.component';
+import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
+import { SysAdminNavbarComponent } from './sys-admin-navbar/sys-admin-navbar.component';
+import { OperatorNavbarComponent } from './operator-navbar/operator-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashBoardComponent,
     NetPackageComponent,
-    NetPackageListComponent
+    NetPackageListComponent,
+    CustomerNavbarComponent,
+    SysAdminNavbarComponent,
+    OperatorNavbarComponent
   ],
   imports: [
     BrowserModule,
