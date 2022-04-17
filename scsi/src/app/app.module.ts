@@ -19,6 +19,10 @@ import { PackagesComponent } from './packages/packages.component';
 import { NewsComponent } from './news/news.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { AccountComponent } from './account/account.component';
+import { SysPackagesComponent } from './sys-packages/sys-packages.component';
+import { SysCustomersComponent } from './sys-customers/sys-customers.component';
+import { SysComplaintComponent } from './sys-complaint/sys-complaint.component';
+import { SysAccountComponent } from './sys-account/sys-account.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { AccountComponent } from './account/account.component';
     PackagesComponent,
     NewsComponent,
     ComplaintComponent,
-    AccountComponent
+    AccountComponent,
+    SysPackagesComponent,
+    SysCustomersComponent,
+    SysComplaintComponent,
+    SysAccountComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sys-admin-navbar',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SysAdminNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  clickHome(): void {
+    this.router.navigate(['syshome']);
+  }
+  clickPackages(): void {
+    this.router.navigate(['syspackages']);
+  }
+  clickCustomers(): void {
+    this.router.navigate(['syscustomers']);
+  }
+  clickComplaint(): void {
+    this.router.navigate(['syscomplaint']);
+  }
+  clickAccount(): void {
+    this.router.navigate(['sysaccount']);
+  }
 }
