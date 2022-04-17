@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-navbar',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  clickHome(): void {
+    this.router.navigate(['home']);
+  }
+  clickPackages(): void {
+    this.router.navigate(['packages']);
+  }
+  clickNews(): void {
+    this.router.navigate(['news']);
+  }
+  clickComplaint(): void {
+    this.router.navigate(['complaint']);
+  }
+  clickAccount(): void {
+    this.router.navigate(['account']);
+  }
 }

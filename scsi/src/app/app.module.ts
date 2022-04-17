@@ -15,6 +15,10 @@ import { OperatorNavbarComponent } from './operator-navbar/operator-navbar.compo
 import { UserHomeComponent } from './user-home/user-home.component';
 import { SysAdminHomeComponent } from './sys-admin-home/sys-admin-home.component';
 import { OperatorHomeComponent } from './operator-home/operator-home.component';
+import { PackagesComponent } from './packages/packages.component';
+import { NewsComponent } from './news/news.component';
+import { ComplaintComponent } from './complaint/complaint.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { OperatorHomeComponent } from './operator-home/operator-home.component';
     OperatorNavbarComponent,
     UserHomeComponent,
     SysAdminHomeComponent,
-    OperatorHomeComponent
+    OperatorHomeComponent,
+    PackagesComponent,
+    NewsComponent,
+    ComplaintComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
