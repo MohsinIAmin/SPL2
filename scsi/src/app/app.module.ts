@@ -12,6 +12,9 @@ import { NetPackageListComponent } from './net-package-list/net-package-list.com
 import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
 import { SysAdminNavbarComponent } from './sys-admin-navbar/sys-admin-navbar.component';
 import { OperatorNavbarComponent } from './operator-navbar/operator-navbar.component';
+import { UserHomeComponent } from './user-home/user-home.component';
+import { SysAdminHomeComponent } from './sys-admin-home/sys-admin-home.component';
+import { OperatorHomeComponent } from './operator-home/operator-home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { OperatorNavbarComponent } from './operator-navbar/operator-navbar.compo
     NetPackageListComponent,
     CustomerNavbarComponent,
     SysAdminNavbarComponent,
-    OperatorNavbarComponent
+    OperatorNavbarComponent,
+    UserHomeComponent,
+    SysAdminHomeComponent,
+    OperatorHomeComponent
   ],
   imports: [
     BrowserModule,
