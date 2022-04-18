@@ -1,11 +1,14 @@
 .packageList {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
  
 }
-
+.packagesshow{
+    background-image: url(../../assets/live-home.svg);
+    padding: 10px;
+}
 .packageList>* {
     box-sizing: border-box;
 }
