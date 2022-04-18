@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { assertPlatform, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
 import { Customer } from '../models/customer';
 import { CustomerAccountService } from '../services/customer-account.service';
 
@@ -11,8 +11,6 @@ import { CustomerAccountService } from '../services/customer-account.service';
 })
 export class SignupFormComponent implements OnInit {
 
-  form: FormBuilder = new FormBuilder;
-
   customerAccount = new Customer();
 
   constructor(private router: Router, private customerService: CustomerAccountService) { }
@@ -20,8 +18,25 @@ export class SignupFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void { 
-    
+  onSubmit(): void {
+
+  }
+
+  register(): void {
+    this.customerService.register(this.customerAccount)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate(['login']);
+        },
+        error => { 
+          alert("User Name already exixt");
+        }
+      );
+  }
+
+  loginClick(): void {
+    this.router.navigate(['login']);
   }
 
 }

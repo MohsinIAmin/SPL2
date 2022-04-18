@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { ComplaintComponent } from './complaint/complaint.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 import { NetPackageListComponent } from './net-package-list/net-package-list.component';
 import { NewsComponent } from './news/news.component';
 import { OperatorAccountComponent } from './operator-account/operator-account.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'complaint', component: ComplaintComponent },
   { path: 'account', component: AccountComponent },
   { path: 'signup', component: SignupFormComponent },
+  { path: 'login', component: LoginFormComponent },
   { path: 'syshome', component: SysAdminHomeComponent },
   { path: 'syspackages', component: SysPackagesComponent },
   { path: 'syscustomers', component: SysCustomersComponent },
