@@ -29,6 +29,7 @@ import { OperatorPackagesComponent } from './operator-packages/operator-packages
 import { OperatorNewsComponent } from './operator-news/operator-news.component';
 import { OperatorComplaintComponent } from './operator-complaint/operator-complaint.component';
 import { OperatorAccountComponent } from './operator-account/operator-account.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { OperatorAccountComponent } from './operator-account/operator-account.co
     OperatorPackagesComponent,
     OperatorNewsComponent,
     OperatorComplaintComponent,
-    OperatorAccountComponent
+    OperatorAccountComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,109 @@
+.footer-02 {
+    background: #131719;
+}
+footer {
+    padding: 5em 0;
+    display: block;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: beige;
+}
+h2{
+    color: aliceblue;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.footer-02 .partner-wrap h3 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: "Poppins", Arial, sans-serif;
+}
+.footer-02 .subscribe-form .form-group .submit {
+    color: #fff !important;
+    display: block;
+    width: 150px;
+    height: 56px;
+    font-size: 14px;
+    background: #bfa88e !important;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+.footer-02 .subscribe-form .form-group input {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    color: rgba(0, 0, 0, 0.3) !important;
+    font-size: 16px;
+    height: 56px;
+    border-radius: 0;
+}
+.footer-02 .subscribe-form .form-group {
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.footer-02 .subscribe-form {
+    border-radius: 40px;
+    background: #fff;
+    padding: 3px;
+    -webkit-box-shadow: 0px -12px 21px -15px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px -12px 21px -15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -12px 21px -15px rgb(0 0 0 / 10%);
+}
+p{
+    color: aqua;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+footer-02 .subscribe {
+    margin-top: -105px;
+}
+.mb-5, .my-5 {
+    margin-bottom: 3rem !important;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media (max-width: 1199.98px){
+.footer-02 .border-left {
+    border: none;
+}
+
+.footer-02 .border-left {
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}}
+@media (min-width: 768px){
+.mb-md-0, .my-md-0 {
+    margin-bottom: 0 !important;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+}
+}
+.border-left {
+    border-left: 1px solid #dee2e6 !important;
+}

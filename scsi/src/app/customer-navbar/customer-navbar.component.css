@@ -1,0 +1,29 @@
+
+.menu{
+    background-color: #0175ce;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+img{
+    border-radius: 2rem;
+    height: 60px;
+    width: 90px;
+}
+.navbar-nav{
+    justify-content: space-around;
+    border: 3px;
+}
+li{
+    border: 1.5px;
+    border-color: bisque;
+}
+.nav-item{
+    border-radius: 5px;
+    background-color: white;
+}
+
+#navbarNav{
+    justify-content: right;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
