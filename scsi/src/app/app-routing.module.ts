@@ -11,6 +11,7 @@ import { OperatorNavbarComponent } from './operator-navbar/operator-navbar.compo
 import { OperatorNewsComponent } from './operator-news/operator-news.component';
 import { OperatorPackagesComponent } from './operator-packages/operator-packages.component';
 import { PackagesComponent } from './packages/packages.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SysAccountComponent } from './sys-account/sys-account.component';
 import { SysAdminHomeComponent } from './sys-admin-home/sys-admin-home.component';
 import { SysAdminNavbarComponent } from './sys-admin-navbar/sys-admin-navbar.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent },
   { path: 'complaint', component: ComplaintComponent },
   { path: 'account', component: AccountComponent },
+  { path: 'signup', component: SignupFormComponent },
   { path: 'syshome', component: SysAdminHomeComponent },
   { path: 'syspackages', component: SysPackagesComponent },
   { path: 'syscustomers', component: SysCustomersComponent },

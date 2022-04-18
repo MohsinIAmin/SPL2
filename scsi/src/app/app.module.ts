@@ -64,7 +64,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
