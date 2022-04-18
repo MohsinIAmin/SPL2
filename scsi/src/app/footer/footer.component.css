@@ -1,5 +1,5 @@
 .footer-02 {
-    background: #0CD5BE;
+    background: #233029;
 }
 footer {
     padding: 5em 0;
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
     box-shadow: 0px -12px 21px -15px rgb(0 0 0 / 10%);
 }
 p{
-    color: aqua;
+    color: white;
 }
 .container {
     width: 100%;

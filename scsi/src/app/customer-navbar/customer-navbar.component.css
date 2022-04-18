@@ -12,9 +12,13 @@ img{
     justify-content: space-around;
     border: 3px;
 }
+.allnavitems{
+    background-color: #10EBA7;
+}
 li{
     border: 1.5px;
     border-color: bisque;
+    font-weight: 200;
 }
 .nav-item{
     border-radius: 5px;

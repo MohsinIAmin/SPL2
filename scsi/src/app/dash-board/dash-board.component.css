@@ -2,6 +2,7 @@ h1 {
     color: #228876;
     align-items: center;
     text-align: center;
+    font-family: cursive;
 }
 .container{
     display: flex;
