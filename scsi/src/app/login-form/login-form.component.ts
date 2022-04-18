@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomerAccountService } from '../services/customer-account.service';
 
 @Component({
@@ -10,13 +11,16 @@ export class LoginFormComponent implements OnInit {
   userName: string = '';
   password: string = '';
 
-  constructor(private customerService: CustomerAccountService) { }
+  constructor(private customerService: CustomerAccountService,private router:Router) { }
 
   ngOnInit(): void {
   }
 
   login(): void {
     this.customerService.login(this.userName,this.password);
+  }
 
+  registerClick():void {
+    this.router.navigate(['signup']);
   }
 }
