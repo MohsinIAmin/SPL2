@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Customer } from '../models/customer';
@@ -9,10 +10,12 @@ import { Customer } from '../models/customer';
 })
 export class CustomerAccountService {
 
+
+  @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
+  
   constructor(private http: HttpClient) { }
 
   register(customer: Customer) {
-    console.log(customer);
     let username = customer.username;
     let mobileNumber = customer.mobileNumber;
     let password = customer.password;
@@ -26,7 +29,9 @@ export class CustomerAccountService {
   login(userName: string, password: string) {
     return this.http.post<any>(`${environment.apiUrl}/customerlogin.php`, { userName, password })
       .pipe(map(Customer => {
-
+        localStorage.setItem('token',Customer[0].userName);
+        this.getLoggedInName.emit(true);
+        return Customer;
       }));
   }
 }

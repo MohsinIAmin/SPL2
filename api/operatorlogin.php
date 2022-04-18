@@ -6,7 +6,7 @@ if (isset($postdata) && !empty($postdata)) {
     $pwd = mysqli_real_escape_string($mysqli, trim($request->password));
     $username = mysqli_real_escape_string($mysqli, trim($request->userName));
     $sql = '';
-    $sql = "SELECT * FROM customer where username='$username' and password='$pwd'";
+    $sql = "SELECT * FROM operator where username='$username' and password='$pwd'";
     if ($result = mysqli_query($mysqli, $sql)) {
         $rows = array();
         while ($row = mysqli_fetch_assoc($result)) {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
 import { CustomerAccountService } from '../services/customer-account.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { CustomerAccountService } from '../services/customer-account.service';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
+  
   userName: string = '';
   password: string = '';
 
@@ -17,7 +19,17 @@ export class LoginFormComponent implements OnInit {
   }
 
   login(): void {
-    this.customerService.login(this.userName,this.password);
+    this.customerService.login(this.userName,this.password)
+    .pipe(first())
+    .subscribe(
+      data=>{
+        this.router.navigate(['account']);
+        alert('log in successsfully');
+      },
+      error=>{
+        alert('user name and password wrong');
+      }
+    );
   }
 
   registerClick():void {
