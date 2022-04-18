@@ -1,0 +1,24 @@
+.container{
+  
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 50%;
+border-radius: 5px;
+  justify-content:center ;
+  align-content: center;
+}
+h1{
+    text-align: center;
+}
+.complaint{
+    padding-top: 100px;
+    display: block;
+    height: 500px;
+    width: auto;
+    background-image: url("../../assets/2.jpg");
+}
+button{
+    width: 70%;
+    border-radius: 5px;
+}
