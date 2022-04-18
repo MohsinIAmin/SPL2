@@ -22,4 +22,11 @@ export class CustomerAccountService {
         return Customer;
       }));
   }
+
+  login(userName: string, password: string) {
+    return this.http.post<any>(`${environment.apiUrl}/customerlogin.php`, { userName, password })
+      .pipe(map(Customer => {
+
+      }));
+  }
 }
