@@ -1,23 +1,23 @@
-<app-customer-navbar></app-customer-navbar>
+<app-sys-admin-navbar></app-sys-admin-navbar>
 
 <div class="wrapper fadeInDown">
     <div id="formContent">
         <div class="fadeIn first">
-            <div>User Register</div>
+            <div>Operator Register</div>
         </div>
 
         <form>
             <input type="text" id="name" class="fadeIn second" placeholder="user name"
-                [(ngModel)]="customerAccount.username" [ngModelOptions]="{standalone: true}" />
+                [(ngModel)]="sysAccount.username" [ngModelOptions]="{standalone: true}" />
 
             <input type="text" id="phone" class="fadeIn third" placeholder="Phone Number"
-                [(ngModel)]="customerAccount.mobileNumber" [ngModelOptions]="{standalone: true}" />
+                [(ngModel)]="sysAccount.mobileNumber" [ngModelOptions]="{standalone: true}" />
 
-            <input type="text" id="address" class="fadeIn third" placeholder="Address"
-                [(ngModel)]="customerAccount.address" [ngModelOptions]="{standalone: true}" />
+            <input type="text" id="address" class="fadeIn third" placeholder="Job ID"
+                [(ngModel)]="sysAccount.jobId" [ngModelOptions]="{standalone: true}" />
 
             <input type="password" id="password" class="fadeIn third" placeholder="Password"
-                [(ngModel)]="customerAccount.password" [ngModelOptions]="{standalone: true}" />
+                [(ngModel)]="sysAccount.password" [ngModelOptions]="{standalone: true}" />
 
             <input type="submit" class="fadeIn fourth" value="Register" (click)="register()" />
 

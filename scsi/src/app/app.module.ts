@@ -32,6 +32,11 @@ import { OperatorComplaintComponent } from './operator-complaint/operator-compla
 import { OperatorAccountComponent } from './operator-account/operator-account.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { SysLoginComponent } from './sys-login/sys-login.component';
+import { SysSignupComponent } from './sys-signup/sys-signup.component';
+import { OperatorSignupComponent } from './operator-signup/operator-signup.component';
+import { OperatorLoginComponent } from './operator-login/operator-login.component';
+import { AddPackageComponent } from './add-package/add-package.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +64,12 @@ import { FormsModule } from '@angular/forms';
     OperatorNewsComponent,
     OperatorComplaintComponent,
     OperatorAccountComponent,
-    FooterComponent
+    FooterComponent,
+    SysLoginComponent,
+    SysSignupComponent,
+    OperatorSignupComponent,
+    OperatorLoginComponent,
+    AddPackageComponent
   ],
   imports: [
     BrowserModule,

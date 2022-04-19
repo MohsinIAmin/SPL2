@@ -18,10 +18,6 @@ export class SignupFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
-
-  }
-
   register(): void {
     this.customerService.register(this.customerAccount)
       .pipe(first())

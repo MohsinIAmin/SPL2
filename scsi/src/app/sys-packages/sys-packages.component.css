@@ -1,0 +1,53 @@
+.packageList {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+}
+.packagesshow{
+    background-image: url(../../assets/lbg.svg);
+    padding: 10px;
+}
+.packageList>* {
+    box-sizing: border-box;
+}
+
+.packageList>*:not(:last-child) {
+    margin-right: 32px;
+}
+
+.packageListItem {
+    flex: 0 1 calc(33.3% - 32px);
+}
+
+.package {
+    display: block;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    align-items: center;
+}
+.button{
+    border-radius: 1rem 1 rem 1rem 0rem;
+}
+hr{
+    border: 1px dotted;
+}
+ul.li{
+text-decoration: none;
+border-bottom: black dotted;
+}
+#pname{
+    text-align: center;
+}
+
+li.a{
+    font-weight: 500;
+}
+
+mat-toolbar {
+    justify-content: space-between;
+}

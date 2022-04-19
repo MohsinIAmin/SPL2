@@ -5,18 +5,15 @@ $request = json_decode($postdata);
 if (isset($postdata) && !empty($postdata)) {
     $username = mysqli_real_escape_string($mysqli, trim($request->username));
     $mobileNumber = mysqli_real_escape_string($mysqli, (int)$request->mobileNumber);
-    $address = mysqli_real_escape_string($mysqli, trim($request->address));
+    $jobId = mysqli_real_escape_string($mysqli, trim($request->jobId));
     $password = mysqli_real_escape_string($mysqli, (int)$request->password);
-    $type = 'deactive';
-    $sql = "INSERT INTO customer(username,mobileNumber,address,password,type) VALUES ('{$username}','{$mobileNumber}','{$address}','{$password}','{$type}')";
-
+    $sql = "INSERT INTO sysadmin(username,mobileNumber,jobId,password) VALUES ('{$username}','{$mobileNumber}','{$jobId}','{$password}')";
     if ($mysqli->query($sql) === TRUE) {
         $authdata = [
             'username' => $username,
             'mobileNumber' => $mobileNumber,
-            'address' => $address,
-            'password' => $password,
-            'type'    => $type
+            'jobId' => $jobId,
+            'password' => $password
         ];
         echo json_encode($authdata);
     } else {
