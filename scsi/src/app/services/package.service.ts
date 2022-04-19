@@ -23,6 +23,6 @@ export class PackageService {
   }
 
   getAllPackage(): Observable<NetPackage[]> {
-    return this.http.get<NetPackage[]>(`${environment.apiUrl}/addpackage.php`);
+    return this.http.get<NetPackage[]>(`${environment.apiUrl}/getallpackage.php`);
   }
 }
