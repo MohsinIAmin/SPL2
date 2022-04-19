@@ -23,7 +23,7 @@ export class OperatorLoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate(['operatoraccount']);
+          this.router.navigate(['operatorhome']);
           alert('log in successsfully');
         },
         error => {
