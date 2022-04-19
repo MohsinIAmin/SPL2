@@ -1,2 +1,33 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
-<p>add packages</p>
+<button class="btn btn-primary" (click)="addNewPackage()">Add new package</button>
+<div class="packagesshow">
+    <div class="packageList container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px grid"
+        fxLayoutAlign="flex-start">
+        <ng-container *ngFor="let netpack of allPackage">
+            <br>
+            <div class="package">
+                <div class="matha" align="center">
+                    <br>
+                    <h2><span id="pname"> {{netpack.name}}</span> </h2>
+                </div>
+                <div class="description" align="center">
+                    <h1 style="color: #F5A810;">{{netpack.speed}}MBPS</h1>
+                    <ul type="none">
+                        <li>High Availability</li>
+                        <hr>
+                        <li>FTTH Teachnology</li>
+                        <hr>
+                        <li>Unlimited Bandwidth</li>
+                        <hr>
+                        <li>Cost : {{netpack.cost}}</li>
+                        <hr>
+                    </ul>
+                </div>
+                <div class="submit" align="center">
+                    <button class="btn btn-primary">Update the package</button>
+                </div>
+            </div>
+            <br>
+        </ng-container>
+    </div>
+</div>

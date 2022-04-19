@@ -36,6 +36,7 @@ import { SysLoginComponent } from './sys-login/sys-login.component';
 import { SysSignupComponent } from './sys-signup/sys-signup.component';
 import { OperatorSignupComponent } from './operator-signup/operator-signup.component';
 import { OperatorLoginComponent } from './operator-login/operator-login.component';
+import { AddPackageComponent } from './add-package/add-package.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { OperatorLoginComponent } from './operator-login/operator-login.componen
     SysLoginComponent,
     SysSignupComponent,
     OperatorSignupComponent,
-    OperatorLoginComponent
+    OperatorLoginComponent,
+    AddPackageComponent
   ],
   imports: [
     BrowserModule,

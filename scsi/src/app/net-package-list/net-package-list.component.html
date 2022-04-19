@@ -1,15 +1,15 @@
 <div class="packagesshow">
     <div class="packageList container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px grid"
         fxLayoutAlign="flex-start">
-        <ng-container *ngFor="let _ of [1,2,3]">
+        <ng-container *ngFor="let netpack of allPackage">
             <br>
             <div class="package">
                 <div class="matha" align="center">
                     <br>
-                    <h2><span id="pname"> Silver</span> </h2>
+                    <h2><span id="pname"> {{netpack.name}}</span> </h2>
                 </div>
                 <div class="description" align="center">
-                    <h1 style="color: #F5A810;">30MBPS</h1>
+                    <h1 style="color: #F5A810;">{{netpack.speed}}MBPS</h1>
                     <ul type="none">
                         <li>High Availability</li>
                         <hr>
@@ -17,7 +17,7 @@
                         <hr>
                         <li>Unlimited Bandwidth</li>
                         <hr>
-                        <li>24/7 Customer Service</li>
+                        <li>Cost : {{netpack.cost}}</li>
                         <hr>
                     </ul>
                 </div>

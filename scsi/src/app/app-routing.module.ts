@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
+import { AddPackageComponent } from './add-package/add-package.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { NetPackageListComponent } from './net-package-list/net-package-list.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'sysaccount', component: SysAccountComponent },
   { path: 'syssignup', component: SysSignupComponent },
   { path: 'syslogin', component: SysLoginComponent },
+  { path: 'addpackage', component: AddPackageComponent },
   { path: 'operatorhome', component: OperatorHomeComponent },
   { path: 'operatorpackages', component: OperatorPackagesComponent },
   { path: 'operatornews', component: OperatorNewsComponent },
