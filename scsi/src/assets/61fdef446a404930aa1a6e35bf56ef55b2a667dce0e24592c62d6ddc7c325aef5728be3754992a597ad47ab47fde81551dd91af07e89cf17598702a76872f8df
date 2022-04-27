@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>ঢাকা বিশ্ববিদ্যালয়: শিক্ষার্থী পরিসেবা ব্যবস্থাপনা</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+	    <link href="https://student.eis.du.ac.bd/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+	    <link href="https://student.eis.du.ac.bd/plugins/font-bangla/css/solaimanLipi.css" rel="stylesheet">
+	    <link href="https://student.eis.du.ac.bd/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet">
+	        <!-- Waves Effect Css -->
+	        <link href="https://student.eis.du.ac.bd/plugins/node-waves/waves.css" rel="stylesheet" />
+	            
+	            <!-- Animation Css -->
+	            <link href="https://student.eis.du.ac.bd/plugins/animate-css/animate.css" rel="stylesheet" />
+	                
+	                <link href="https://student.eis.du.ac.bd/css/flag-icon.css" rel="stylesheet">
+	                    
+	                    <!-- Morris Chart Css-->
+	                    <link href="https://student.eis.du.ac.bd/plugins/morrisjs/morris.css" rel="stylesheet" />
+	                    
+	                    <!-- Custom Css -->
+	                    <link href="https://student.eis.du.ac.bd/css/style.css" rel="stylesheet">
+	                    
+	                    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+	                    <link href="https://student.eis.du.ac.bd/css/themes/theme-deep-orange.css" rel="stylesheet" />
+	             
+</head>
+
+<body class="theme-deep-orange">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+		
+	    <div class="modal fade" id="contactmodal" tabindex="-1">
+	        <div class="modal-dialog" role="document">
+	            <div class="modal-content" style="border-radius: 5px">
+	    		
+	                
+		<div class="modal-header text-center" style="background-color: #ff3355; color: white; border-radius:5px 5px 0 0; padding-left:37px">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <span class="material-icons" style="font-size: 60px;">contact_phone</span>
+        </div>
+	                		
+	               
+					<div style="padding: 20px 0 0 0;">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+							<div class="card">
+								<div class="body bg-blue-grey">
+									<h4>এনরোলমেন্ট (ভর্তি) সংক্রান্ত</h4>
+									<div>
+										<ul style="list-style-type:square">
+											<li>লগইন ও  রেজিস্ট্রেশন সমস্যা</li>
+											<li>ভর্তি সংক্রান্ত</li>
+											<li>কারিগরি সমস্যায় (পেমেন্ট, এস এম এস) </li>
+										</ul>
+									</div>
+									<h6>যোগাযোগ</h6>
+									<div>
+										<ul style="list-style-type:square">
+											<li>ফোনঃ (০২)-৫৫১৬৭৭২৪, ০১৯৯৩৯৯২১৪৯, ০১৮২২১৩৭৬০১, ০১৬৩১৯৫৩৮৪৩, ০১৭৪৩০৪২৮৬৪, ০৯৬৬৬৯১১৪৬৩ এক্সট. ৪০৫২</li>
+											<li>ঠিকানাঃ কেন্দ্রীয় ভর্তি অফিস, কক্ষ নং - ২১৪, প্রশাসনিক ভবন, ঢাকা বিশ্ববিদ্যালয়</li>
+											<li>ই-মেইলঃ enrollment@eis.du.ac.bd</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+							<div class="card">
+								<div class="body bg-blue-grey">
+									<h4>পরীক্ষা সংক্রান্ত</h4>
+									<div>
+										<ul style="list-style-type:square">
+											<li>পরীক্ষার ফরম পূরণ</li>
+											<li>প্রবেশ পত্র</li>
+										</ul>
+									</div>
+									<h6>যোগাযোগ</h6>
+									<div>
+										<ul style="list-style-type:square">
+											<li>মোবা: ০১৮১০১১৩৯৮১, ০১৮৮৪৮৭৮৮০৮</li>
+											<li>ঠিকানাঃ পরীক্ষা নিয়ন্ত্রকের অফিস, প্রশাসনিক ভবন, ঢাকা বিশ্ববিদ্যালয়</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	            </div>
+	        </div>
+	    </div>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>                
+<a class="navbar-brand" href="https://student.eis.du.ac.bd">শিক্ষার্থী ই-পরিসেবা ব্যবস্থাপনা, ঢাকা বিশ্ববিদ্যালয়</a>            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Call Search -->
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- #END# Call Search -->
+                    <!-- Language -->                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">                            <span class="flag-icon flag-icon-bd"></span><span>&nbsp;বাংলা</span>
+                        </a>
+                        <ul class="dropdown-menu" style="max-height:120px">
+                            <li class="header">Language</li>
+                            <li class="body">
+                                <ul class="menu">
+	        <li>
+	        <a href="https://student.eis.du.ac.bd/bn/a96g9a8708agas8g58a75g987h5dfhs8d4hj3ghl26f6k4d8kd/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df">
+	        <div>
+	        <span class="flag-icon flag-icon-bd"></span><span>&nbsp;বাংলা</span>
+	        </div>
+	        </a>
+	        </li>
+	        <li>
+	        <a href="https://student.eis.du.ac.bd/en/a96g9a8708agas8g58a75g987h5dfhs8d4hj3ghl26f6k4d8kd/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df">
+	        <div>
+	        <span class="flag-icon flag-icon-gb"></span><span>&nbsp;English</span>
+	        </div>
+	        </a>
+	        </li>                                 </ul>
+                            </li>
+                        </ul>
+                    <!-- #END# Language -->
+                    <!-- Notifications -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <span id="contactlist"><i class="material-icons">phone</i></span>
+                        </a>
+                    </li>
+                </ul>
+    <!-- #Top Bar -->                    <!-- #END# Language -->
+                    <!-- Notifications -->
+                    
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image" style="display:flex; justify-content:center">            <img src="https://student.eis.du.ac.bd/images/dulogo/dulogo.png" width="50" height="64" alt="User" />                </div>
+                <div class="info-container">
+	        <script>
+	            function goToLogout() {
+	                location.href = "https://student.eis.du.ac.bd/bn/2f8639feef43f2964be0cee184dad78c";
+	            }
+	        </script>
+	        <div><button type="button" onclick="goToLogout();" class="btn btn-block bg-red">LOGOUT</button></div></div>                                <div class="btn-group user-helper-dropdown">
+                        
+                        <ul class="dropdown-menu pull-right">
+                            
+                            <li><a href="https://student.eis.du.ac.bd/bn/2f8639feef43f2964be0cee184dad78c"><i class="material-icons">input</i>Log Out</a></li>
+                        </ul>
+                    </div>                </div>
+            </div>
+            <!-- #User Info -->            <div class="menu">
+                <ul class="list">
+                    <li class="header" style="text-align:center">Md. Fahad Hossain</li>
+
+                    <li ><a href="https://student.eis.du.ac.bd/bn/fdalkf78g64gs97hs654g698e7h98qa4g6f7g98egreq/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df" target="_blank"><i class="material-icons">description</i><span>নির্দেশিকা</span></a></li>
+                    <li ><a href="https://student.eis.du.ac.bd/bn/d9d5fc559ee65112f46a1d15cadfe8128aff82c771ca0432bc39f6ee8daf2e90/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df"><i class="material-icons">dashboard</i><span>ড্যাশবোর্ড</span></a></li>
+                    <li ><a href="javascript:void(0);" class="menu-toggle"><i class="material-icons">event_available</i><span>ভর্তি/তালিকাভুক্তি</span></a>
+                    <ul class="ml-menu">
+                        <li ><a href="https://student.eis.du.ac.bd/bn/9h8r4gha6s4a9r8yjk9ry87i9r4j6r7y9ea4v6s4v9a8e7th9w84ba6/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df"><i class="material-icons">school</i><span>স্নাতকপূর্ব ভর্তি</span></a></li>
+                        <li ><a href="https://student.eis.du.ac.bd/bn/g8h7h6r7yj98et798o7yo987wr7fa4sdyt9jte621c1wve1r7h6r1wr/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df"><i class="material-icons">school</i><span>স্নাতকোত্তর ভর্তি</span></a></li>
+                    </ul>
+                    <li ><a href="https://student.eis.du.ac.bd/bn/s6h76h31v6768te7ru98t7io98ytip7646s3fa13av6a7g9s8d7h9sr4h3v1s6d7s/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df"><i class="material-icons">update</i><span>ফলোন্নয়ন</span></a></li>
+                    <li ><a href="https://student.eis.du.ac.bd/bn/79e8j6t9u87ib4s6a3s1v24g6re78yw98g46as4v6s4vae8y79e1g6aeg/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df"><i class="material-icons">local_hospital</i><span>স্বাস্থ্য বীমা</span></a></li>
+                    <li ><a href="https://student.eis.du.ac.bd/bn/5sa76g5fa87sg5fgsdfg2s2g5dsfd6gasg70a6sgasg3asg23as65gasd/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df"><i class="material-icons">payment</i><span>ফি প্রদান</span></a></li>
+                    <li ><a href="https://student.eis.du.ac.bd/bn/7th9reh46a46f7jw9ry87i98e7i6e4r8g446efv16trw987hr61h6ws4b/61fdef446a404930aa1a6e35bf56ef55b2a667dce0e24592c62d6ddc7c325aef5728be3754992a597ad47ab47fde81551dd91af07e89cf17598702a76872f8df" target="_blank"><i class="material-icons">assignment</i><span>পরীক্ষা সংক্রান্ত</span></a></li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2010 - 21 <a href="javascript:void(0);">Central Admission Office</a>.
+                </div>
+                <div class="version">
+                    <a href="https://www.du.ac.bd">University of Dhaka</a>
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
+                <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+                    <ul class="demo-choose-skin">
+                        <li data-theme="red" class="active">
+                            <div class="red"></div>
+                            <span>Red</span>
+                        </li>
+                        <li data-theme="pink">
+                            <div class="pink"></div>
+                            <span>Pink</span>
+                        </li>
+                        <li data-theme="purple">
+                            <div class="purple"></div>
+                            <span>Purple</span>
+                        </li>
+                        <li data-theme="deep-purple">
+                            <div class="deep-purple"></div>
+                            <span>Deep Purple</span>
+                        </li>
+                        <li data-theme="indigo">
+                            <div class="indigo"></div>
+                            <span>Indigo</span>
+                        </li>
+                        <li data-theme="blue">
+                            <div class="blue"></div>
+                            <span>Blue</span>
+                        </li>
+                        <li data-theme="light-blue">
+                            <div class="light-blue"></div>
+                            <span>Light Blue</span>
+                        </li>
+                        <li data-theme="cyan">
+                            <div class="cyan"></div>
+                            <span>Cyan</span>
+                        </li>
+                        <li data-theme="teal">
+                            <div class="teal"></div>
+                            <span>Teal</span>
+                        </li>
+                        <li data-theme="green">
+                            <div class="green"></div>
+                            <span>Green</span>
+                        </li>
+                        <li data-theme="light-green">
+                            <div class="light-green"></div>
+                            <span>Light Green</span>
+                        </li>
+                        <li data-theme="lime">
+                            <div class="lime"></div>
+                            <span>Lime</span>
+                        </li>
+                        <li data-theme="yellow">
+                            <div class="yellow"></div>
+                            <span>Yellow</span>
+                        </li>
+                        <li data-theme="amber">
+                            <div class="amber"></div>
+                            <span>Amber</span>
+                        </li>
+                        <li data-theme="orange">
+                            <div class="orange"></div>
+                            <span>Orange</span>
+                        </li>
+                        <li data-theme="deep-orange">
+                            <div class="deep-orange"></div>
+                            <span>Deep Orange</span>
+                        </li>
+                        <li data-theme="brown">
+                            <div class="brown"></div>
+                            <span>Brown</span>
+                        </li>
+                        <li data-theme="grey">
+                            <div class="grey"></div>
+                            <span>Grey</span>
+                        </li>
+                        <li data-theme="blue-grey">
+                            <div class="blue-grey"></div>
+                            <span>Blue Grey</span>
+                        </li>
+                        <li data-theme="black">
+                            <div class="black"></div>
+                            <span>Black</span>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">
+                    <div class="demo-settings">
+                        <p>GENERAL SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Report Panel Usage</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Email Redirect</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>SYSTEM SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Notifications</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Auto Updates</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>ACCOUNT SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Offline</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Location Permission</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- #END# Right Sidebar -->
+    </section>
+<section class="content">
+        <div class="container-fluid">
+            <div class="block-header">                <h2></h2>
+            </div>ERROR        </div>
+    </section>
+<!-- Script Links -->
+	<script src="https://student.eis.du.ac.bd/plugins/jquery/jquery.min.js"></script>
+	<script src="https://student.eis.du.ac.bd/plugins/bootstrap/js/bootstrap.js"></script>
+	<script src="https://student.eis.du.ac.bd/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+	<script src="https://student.eis.du.ac.bd/plugins/node-waves/waves.js"></script>
+	<script src="https://student.eis.du.ac.bd/js/admin.js"></script>
+	<script src="https://student.eis.du.ac.bd/js/csedu_basic.js"></script>
+	<script src="https://student.eis.du.ac.bd/js/modalForContacts.js"></script>
+</body>
+</html>
