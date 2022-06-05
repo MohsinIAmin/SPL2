@@ -4,9 +4,9 @@ $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 if (isset($postdata) && !empty($postdata)) {
     $username = mysqli_real_escape_string($mysqli, trim($request->username));
-    $mobileNumber = mysqli_real_escape_string($mysqli, (int)$request->mobileNumber);
+    $mobileNumber = mysqli_real_escape_string($mysqli, trim($request->mobileNumber));
     $address = mysqli_real_escape_string($mysqli, trim($request->address));
-    $password = mysqli_real_escape_string($mysqli, (int)$request->password);
+    $password = mysqli_real_escape_string($mysqli, trim($request->password));
     $type = 'deactive';
     $sql = "INSERT INTO customer(username,mobileNumber,address,password,type) VALUES ('{$username}','{$mobileNumber}','{$address}','{$password}','{$type}')";
 
