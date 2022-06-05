@@ -20,6 +20,7 @@ export class SysLoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
+          localStorage.setItem('token', data[0].username);
           this.router.navigate(['sysaccount']);
           alert('log in successsfully');
         },

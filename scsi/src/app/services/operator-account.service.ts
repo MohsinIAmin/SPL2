@@ -26,8 +26,13 @@ export class OperatorAccountService {
   login(userName: string, password: string) {
     return this.http.post<any>(`${environment.apiUrl}/operatorlogin.php`, { userName, password })
       .pipe(map(Operator => {
-        localStorage.setItem('token',Operator[0].userName);
-        this.getLoggedInName.emit(true);
+        return Operator;
+      }));
+  }
+
+  getOperator(userName: any) {
+    return this.http.post<any>(`${environment.apiUrl}/getoperator.php`, { userName })
+      .pipe(map(Operator => {
         return Operator;
       }));
   }

@@ -12,7 +12,7 @@ export class CustomerAccountService {
 
 
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
-  
+
   constructor(private http: HttpClient) { }
 
   register(customer: Customer) {
@@ -29,8 +29,13 @@ export class CustomerAccountService {
   login(userName: string, password: string) {
     return this.http.post<any>(`${environment.apiUrl}/customerlogin.php`, { userName, password })
       .pipe(map(Customer => {
-        localStorage.setItem('token',Customer[0].userName);
-        this.getLoggedInName.emit(true);
+        return Customer;
+      }));
+  }
+  
+  getUser(userName: any) {
+    return this.http.post<any>(`${environment.apiUrl}/getuser.php`, { userName })
+      .pipe(map(Customer => {
         return Customer;
       }));
   }

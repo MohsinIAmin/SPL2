@@ -32,4 +32,11 @@ export class SysAccountService {
         return Sysadmin;
       }));
   }
+
+  getSysadmin(userName: any) {
+    return this.http.post<any>(`${environment.apiUrl}/getsysadmin.php`, { userName })
+      .pipe(map(Sysadmin => {
+        return Sysadmin;
+      }));
+  }
 }

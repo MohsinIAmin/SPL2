@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { first } from 'rxjs/operators';
+
+import { Customer } from '../models/customer';
+import { CustomerAccountService } from '../services/customer-account.service';
 
 @Component({
   selector: 'app-account',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private customerService: CustomerAccountService) { }
+
+  customer = new Customer();
 
   ngOnInit(): void {
+    this.getCustomer();
   }
 
+  getCustomer() {
+    const userName = localStorage.getItem('token')?.toString();
+    console.log(userName);
+    this.customerService.getUser(userName)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.customer = data[0];
+          console.log(this.customer);
+        }
+      )
+  }
 }
