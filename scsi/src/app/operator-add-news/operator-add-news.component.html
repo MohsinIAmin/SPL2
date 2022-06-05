@@ -1,0 +1,16 @@
+<app-operator-navbar></app-operator-navbar>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <div class="fadeIn first">
+            <div>News</div>
+        </div>
+
+        <form>
+            <input type="text" id="heading" class="fadeIn second" name="heading" placeholder="Heading" [(ngModel)]="news.heading" [ngModelOptions]="{standalone: true}">
+            <input type="text" id="description" class="fadeIn third" name="description" placeholder="Description" [(ngModel)]="news.description" [ngModelOptions]="{standalone: true}">
+            <input type="submit" class="fadeIn fourth" value="Submit" (click)="submit()">
+        </form>
+
+    </div>
+</div>
