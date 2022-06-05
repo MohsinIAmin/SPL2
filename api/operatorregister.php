@@ -4,9 +4,9 @@ $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 if (isset($postdata) && !empty($postdata)) {
     $username = mysqli_real_escape_string($mysqli, trim($request->username));
-    $mobileNumber = mysqli_real_escape_string($mysqli, (int)$request->mobileNumber);
+    $mobileNumber = mysqli_real_escape_string($mysqli, trim($request->mobileNumber));
     $jobId = mysqli_real_escape_string($mysqli, trim($request->jobId));
-    $password = mysqli_real_escape_string($mysqli, (int)$request->password);
+    $password = mysqli_real_escape_string($mysqli, trim($request->password));
     $sql = "INSERT INTO operator(username,mobileNumber,jobId,password) VALUES ('{$username}','{$mobileNumber}','{$jobId}','{$password}')";
     if ($mysqli->query($sql) === TRUE) {
         $authdata = [
