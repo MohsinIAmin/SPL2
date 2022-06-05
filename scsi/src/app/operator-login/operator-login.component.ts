@@ -23,6 +23,7 @@ export class OperatorLoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
+          localStorage.setItem('token', data[0].username);
           this.router.navigate(['operatorhome']);
           alert('log in successsfully');
         },

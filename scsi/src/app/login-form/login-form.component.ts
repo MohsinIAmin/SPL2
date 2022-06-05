@@ -23,7 +23,8 @@ export class LoginFormComponent implements OnInit {
     .pipe(first())
     .subscribe(
       data=>{
-        this.router.navigate(['account']);
+        localStorage.setItem('token', data[0].username);
+        this.router.navigate(['home']);
         alert('log in successsfully');
       },
       error=>{

@@ -4,4 +4,5 @@ export class Customer {
     address: string = '';
     password: string = '';
     type: string = '';
+    package_id: string = '';
 }
