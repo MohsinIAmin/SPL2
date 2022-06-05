@@ -7,6 +7,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { NetPackageListComponent } from './net-package-list/net-package-list.component';
 import { NewsComponent } from './news/news.component';
 import { OperatorAccountComponent } from './operator-account/operator-account.component';
+import { OperatorAddNewsComponent } from './operator-add-news/operator-add-news.component';
 import { OperatorComplaintComponent } from './operator-complaint/operator-complaint.component';
 import { OperatorHomeComponent } from './operator-home/operator-home.component';
 import { OperatorLoginComponent } from './operator-login/operator-login.component';
@@ -49,7 +50,8 @@ const routes: Routes = [
   { path: 'operatorcomplaint', component: OperatorComplaintComponent },
   { path: 'operatoraccount', component: OperatorAccountComponent },
   { path: 'operatorsignup', component: OperatorSignupComponent },
-  { path: 'operatorlogin', component: OperatorLoginComponent }
+  { path: 'operatorlogin', component: OperatorLoginComponent },
+  { path: 'addnews', component: OperatorAddNewsComponent }
 ];
 
 @NgModule({
