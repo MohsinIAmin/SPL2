@@ -2,3 +2,9 @@
 <div class="container" align="center">
     <button class="btn btn-primary" (click)="addNewNews()">Add new news</button>
 </div>
+<ng-container *ngFor="let news of allNews">
+    <p>{{news.heading}}</p>
+    <p>{{news.description}}</p>
+    <p>{{news.operator_id}}</p>
+    <p>{{news.timestamp}}</p>
+</ng-container>

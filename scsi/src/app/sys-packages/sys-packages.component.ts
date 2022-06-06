@@ -24,10 +24,15 @@ export class SysPackagesComponent implements OnInit {
 
   getAllPackage() {
     this.packageService.getAllPackage()
-      .subscribe(response => { 
-        this.allPackage = response.map(item=>{
-          return new NetPackage(item.name,item.speed,item.cost);
+      .subscribe(response => {
+        this.allPackage = response.map(item => {
+          return new NetPackage(item.name, item.speed, item.cost);
         });
       });
+  }
+
+  updatePackage(netPac: NetPackage): void {
+    this.packageService.setUpdatePackage(netPac);
+    this.router.navigate(['updatepackage']);
   }
 }

@@ -11,14 +11,13 @@ import { NewsService } from '../services/news.service';
 export class OperatorNewsComponent implements OnInit {
 
   
+  allNews:News[] = [];
 
   constructor(private newsService: NewsService,private router: Router) { }
 
   ngOnInit(): void {
     this.getAllNews();
   }
-
-  allNews:News[] = [];
 
   addNewNews(): void {
     this.router.navigate(['addnews']);

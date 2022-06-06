@@ -1,10 +1,9 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
 <div class="container" align="center">
-<button class="btn btn-primary" (click)="addNewPackage()">Add new package</button>
+    <button class="btn btn-primary" (click)="addNewPackage()">Add new package</button>
 </div>
 <div class="packagesshow">
-    <div class="packageList container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px grid"
-        fxLayoutAlign="flex-start">
+    <div class="packageList container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px grid" fxLayoutAlign="flex-start">
         <ng-container *ngFor="let netpack of allPackage">
             <br>
             <div class="package">
@@ -26,7 +25,7 @@
                     </ul>
                 </div>
                 <div class="submit" align="center">
-                    <button class="btn btn-primary">Update the package</button>
+                    <button class="btn btn-primary" (click)="updatePackage(netpack)">Update package</button>
                 </div>
             </div>
             <br>

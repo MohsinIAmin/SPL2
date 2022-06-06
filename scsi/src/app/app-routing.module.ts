@@ -25,6 +25,7 @@ import { SysCustomersComponent } from './sys-customers/sys-customers.component';
 import { SysLoginComponent } from './sys-login/sys-login.component';
 import { SysPackagesComponent } from './sys-packages/sys-packages.component';
 import { SysSignupComponent } from './sys-signup/sys-signup.component';
+import { SysUpdatePackageComponent } from './sys-update-package/sys-update-package.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 
 const routes: Routes = [
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'sysaccount', component: SysAccountComponent },
   { path: 'syssignup', component: SysSignupComponent },
   { path: 'syslogin', component: SysLoginComponent },
+  { path: 'updatepackage', component: SysUpdatePackageComponent },
   { path: 'addpackage', component: AddPackageComponent },
   { path: 'operatorhome', component: OperatorHomeComponent },
   { path: 'operatorpackages', component: OperatorPackagesComponent },
