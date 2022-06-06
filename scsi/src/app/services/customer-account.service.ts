@@ -15,6 +15,8 @@ export class CustomerAccountService {
 
   constructor(private http: HttpClient) { }
 
+  customerToUpdate = new Customer('', '', '', '', '', '');
+
   register(customer: Customer) {
     let username = customer.username;
     let mobileNumber = customer.mobileNumber;
@@ -32,7 +34,7 @@ export class CustomerAccountService {
         return Customer;
       }));
   }
-  
+
   getUser(userName: any) {
     return this.http.post<any>(`${environment.apiUrl}/getuser.php`, { userName })
       .pipe(map(Customer => {
@@ -40,7 +42,25 @@ export class CustomerAccountService {
       }));
   }
 
-  getAllCustomer(): Observable<Customer[]>{
+  getAllCustomer(): Observable<Customer[]> {
     return this.http.get<Customer[]>(`${environment.apiUrl}/getallcustomer.php`);
+  }
+
+  setCustomerToUpdate(customer: Customer) {
+    this.customerToUpdate = customer;
+  }
+
+  getCustomerToUpdate() {
+    return this.customerToUpdate;
+  }
+
+  updateUser(customer: Customer) {
+    let username = customer.username;
+    let type = customer.type;
+    let package_id = customer.package_id;
+    return this.http.post<any>(`${environment.apiUrl}/updatecustomer.php`, { username, type, package_id })
+      .pipe(map(NetPackage => {
+        return NetPackage;
+      }));
   }
 }
