@@ -6,7 +6,6 @@ if (isset($postdata) && !empty($postdata)) {
     $name = mysqli_real_escape_string($mysqli, trim($request->name));
     $speed = mysqli_real_escape_string($mysqli, trim($request->speed));
     $cost = mysqli_real_escape_string($mysqli, trim($request->cost));
-    // $sql = "INSERT INTO package(name,speed,cost) VALUES ('{$name}','{$speed}','{$cost}')";
     $sql = "UPDATE package SET speed = '{$speed}', cost = '{$cost}' WHERE package.name = '{$name}'";
 
     if ($mysqli->query($sql) === TRUE) {

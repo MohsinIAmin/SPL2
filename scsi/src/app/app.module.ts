@@ -39,6 +39,7 @@ import { OperatorLoginComponent } from './operator-login/operator-login.componen
 import { AddPackageComponent } from './add-package/add-package.component';
 import { OperatorAddNewsComponent } from './operator-add-news/operator-add-news.component';
 import { SysUpdatePackageComponent } from './sys-update-package/sys-update-package.component';
+import { SysSolveTicketComponent } from './sys-solve-ticket/sys-solve-ticket.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { SysUpdatePackageComponent } from './sys-update-package/sys-update-packa
     OperatorLoginComponent,
     AddPackageComponent,
     OperatorAddNewsComponent,
-    SysUpdatePackageComponent
+    SysUpdatePackageComponent,
+    SysSolveTicketComponent
   ],
   imports: [
     BrowserModule,
