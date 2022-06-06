@@ -1,0 +1,18 @@
+<app-sys-admin-navbar></app-sys-admin-navbar>
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <div class="fadeIn first">
+            <div>Package description</div>
+        </div>
+
+        <form>
+            <input disabled="true" type="text" id="packageName" class="fadeIn second" name="name" placeholder="package name" [(ngModel)]="pacTobeUpdate.name" [ngModelOptions]="{standalone: true}">
+            <input type="text" id="speed" class="fadeIn third" name="speed" placeholder="speed" [(ngModel)]="pacTobeUpdate.speed" [ngModelOptions]="{standalone: true}">
+            <input type="text" id="cost" class="fadeIn third" name="speed" placeholder="cost" [(ngModel)]="pacTobeUpdate.cost" [ngModelOptions]="{standalone: true}">
+            <input type="submit" class="fadeIn fourth" value="Submit" (click)="submit()">
+        </form>
+
+    </div>
+</div>
