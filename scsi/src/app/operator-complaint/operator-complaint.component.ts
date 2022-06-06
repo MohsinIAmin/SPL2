@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { Ticket } from '../models/ticket';
+import { TicketService } from '../services/ticket.service';
 
 @Component({
   selector: 'app-operator-complaint',
@@ -7,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperatorComplaintComponent implements OnInit {
 
-  constructor() { }
+  newTicket = new Ticket('', '', '', '', '', '');
+  
+  constructor(private ticketService: TicketService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  submit() {
+    this.newTicket.timestamp = String(Date.now());
+    this.ticketService.addNewTicket(this.newTicket)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate(['account']);
+        },
+        error => {
+          alert('Package already exixt');
+          this.router.navigate(['account']);
+        }
+      );
   }
 
 }

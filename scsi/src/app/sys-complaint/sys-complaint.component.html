@@ -1,2 +1,9 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
 <p>Complaint</p>
+<ng-container *ngFor="let ticket of allTicket">
+    <p>{{ticket.customer_id}}</p>
+    <p>{{ticket.description}}</p>
+    <p>{{ticket.status}}</p>
+    <p>{{ticket.timestamp}}</p>
+    <button (click)="solve(ticket)">Solve</button>
+</ng-container>

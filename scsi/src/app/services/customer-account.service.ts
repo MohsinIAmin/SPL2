@@ -39,4 +39,8 @@ export class CustomerAccountService {
         return Customer;
       }));
   }
+
+  getAllCustomer(): Observable<Customer[]>{
+    return this.http.get<Customer[]>(`${environment.apiUrl}/getallcustomer.php`);
+  }
 }

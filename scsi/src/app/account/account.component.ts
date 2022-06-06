@@ -13,14 +13,14 @@ export class AccountComponent implements OnInit {
 
   constructor(private customerService: CustomerAccountService) { }
 
-  customer = new Customer();
+  customer = new Customer('', '', '', '', '', '');
 
   ngOnInit(): void {
     this.getCustomer();
   }
 
   getCustomer() {
-    const userName = localStorage.getItem('token')?.toString();
+    const userName = String(localStorage.getItem('token'));
     console.log(userName);
     this.customerService.getUser(userName)
       .pipe(first())

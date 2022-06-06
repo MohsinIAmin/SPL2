@@ -1,0 +1,66 @@
+.container {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 40%;
+    border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+    border: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.complaint {
+    padding-top: 100px;
+    display: block;
+    height: 500px;
+    width: auto;
+    /* background-image: url("../../assets/2.jpg"); */
+    background-color: blanchedalmond;
+}
+
+button {
+    width: 70%;
+    border-radius: 5px;
+}
+
+.chat {
+    width: 15%;
+    position: absolute;
+    margin-left: 85%;
+    size: 30px;
+    background-color: #1c87c9;
+    -webkit-border-radius: 60px;
+    border-radius: 5px;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #1198a7;
+        box-shadow: 0 0 5px #1940dc;
+    }
+    50% {
+        background-color: #bfd60d;
+        box-shadow: 0 0 20px #028e5a;
+    }
+    100% {
+        background-color: #2ba805;
+        box-shadow: 0 0 5px #2ba805;
+    }
+}
+
+.chat {
+    animation: glowing 1300ms infinite;
+}
