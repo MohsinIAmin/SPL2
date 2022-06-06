@@ -11,7 +11,7 @@ import { CustomerAccountService } from '../services/customer-account.service';
 })
 export class SignupFormComponent implements OnInit {
 
-  customerAccount = new Customer();
+  customerAccount = new Customer('', '', '', '', '', '');
 
   constructor(private router: Router, private customerService: CustomerAccountService) { }
 
