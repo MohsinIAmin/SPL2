@@ -15,15 +15,21 @@ export class SysCustomersComponent implements OnInit {
   constructor(private customerService: CustomerAccountService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getAllCustomer();
   }
 
-  getAllNews() {
+  getAllCustomer() {
     this.customerService.getAllCustomer()
       .subscribe(response => {
         this.allCustomer = response.map(item => {
           return new Customer(item.username, item.mobileNumber, item.address, item.password, item.type, item.package_id);
         });
       });
+  }
+
+  action(customer: Customer) {
+    this.customerService.setCustomerToUpdate(customer);
+    this.router.navigate(['updatecustomere']);
   }
 
 }

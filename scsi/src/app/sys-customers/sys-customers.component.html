@@ -1,2 +1,10 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
-<p>sys-customers works!</p>
+
+<ng-container *ngFor="let customer of allCustomer">
+    <p>{{customer.username}}</p>
+    <p>{{customer.mobileNumber}}</p>
+    <p>{{customer.address}}</p>
+    <p>{{customer.package_id}}</p>
+    <p>{{customer.type}}</p>
+    <button (click)="action(customer)">Action</button>
+</ng-container>

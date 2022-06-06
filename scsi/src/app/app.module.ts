@@ -40,6 +40,7 @@ import { AddPackageComponent } from './add-package/add-package.component';
 import { OperatorAddNewsComponent } from './operator-add-news/operator-add-news.component';
 import { SysUpdatePackageComponent } from './sys-update-package/sys-update-package.component';
 import { SysSolveTicketComponent } from './sys-solve-ticket/sys-solve-ticket.component';
+import { SysUpdateCustomerComponent } from './sys-update-customer/sys-update-customer.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { SysSolveTicketComponent } from './sys-solve-ticket/sys-solve-ticket.com
     AddPackageComponent,
     OperatorAddNewsComponent,
     SysUpdatePackageComponent,
-    SysSolveTicketComponent
+    SysSolveTicketComponent,
+    SysUpdateCustomerComponent
   ],
   imports: [
     BrowserModule,

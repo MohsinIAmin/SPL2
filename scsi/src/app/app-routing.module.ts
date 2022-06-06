@@ -26,6 +26,7 @@ import { SysLoginComponent } from './sys-login/sys-login.component';
 import { SysPackagesComponent } from './sys-packages/sys-packages.component';
 import { SysSignupComponent } from './sys-signup/sys-signup.component';
 import { SysSolveTicketComponent } from './sys-solve-ticket/sys-solve-ticket.component';
+import { SysUpdateCustomerComponent } from './sys-update-customer/sys-update-customer.component';
 import { SysUpdatePackageComponent } from './sys-update-package/sys-update-package.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'updatepackage', component: SysUpdatePackageComponent },
   { path: 'addpackage', component: AddPackageComponent },
   { path: 'solveticket', component: SysSolveTicketComponent },
+  { path: 'updatecustomere', component: SysUpdateCustomerComponent },
   { path: 'operatorhome', component: OperatorHomeComponent },
   { path: 'operatorpackages', component: OperatorPackagesComponent },
   { path: 'operatornews', component: OperatorNewsComponent },
