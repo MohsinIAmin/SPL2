@@ -1,6 +1,5 @@
 <div class="packagesshow">
-    <div class="packageList container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px grid"
-        fxLayoutAlign="flex-start">
+    <div class="packageList container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px grid" fxLayoutAlign="flex-start">
         <ng-container *ngFor="let netpack of allPackage">
             <br>
             <div class="package">
@@ -22,7 +21,7 @@
                     </ul>
                 </div>
                 <div class="submit" align="center">
-                    <button class="btn btn-primary">Get the package</button>
+                    <button class="btn btn-primary" (click)="updateUser()">Get the package</button>
                 </div>
             </div>
             <br>
