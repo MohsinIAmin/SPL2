@@ -1,6 +1,8 @@
 <app-customer-navbar></app-customer-navbar>
 
-<h1>User account</h1>
+<h1 class="title">User account</h1>
+<div class="information row">
+<div class="col-6 ">
 <ul>
     <li>Username: {{customer.username}}</li>
     <li>Mobile Number: {{customer.mobileNumber}}</li>
@@ -8,3 +10,8 @@
     <li>Package: {{customer.package_id}}</li>
     <li>Status: {{customer.type}}</li>
 </ul>
+</div>
+<div class="col-6 image">
+    <img src="../../assets/1.png" alt="" height="300px" >
+</div>
+</div>

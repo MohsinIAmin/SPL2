@@ -1,4 +1,21 @@
+.news{
+  background-color: beige;
+  font-size: larger;
+  border-radius: 5px;
+}
+.timestamp{
+
+ padding-left: 10px;
+ background-color: aliceblue;
+ text-align: right;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 200px;
+}
 p{
-    width: 80%;
-    align-items: center;
+    margin-left: 10px;
 }

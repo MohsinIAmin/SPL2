@@ -1,6 +1,6 @@
 <?php
 include_once("config.php");
-
+header("Access-Control-Allow-Origin: *");
 $sql = "SELECT description,heading,operator_id,timestamp FROM news ORDER BY timestamp DESC";
 if ($result = mysqli_query($mysqli, $sql)) {
     $rows = array();

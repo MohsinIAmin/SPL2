@@ -26,7 +26,10 @@ h2 {
     color: #cccccc;
 }
 
-
+.title{
+    font-size: larger;
+    font-weight: bolder;
+}
 /* STRUCTURE */
 
 .wrapper {
@@ -47,7 +50,7 @@ h2 {
     width: 90%;
     max-width: 450px;
     position: relative;
-    padding: 0px;
+    padding-top: 30px;
     -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
     text-align: center;
