@@ -1,10 +1,23 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
 
-<ng-container *ngFor="let customer of allCustomer">
-    <p>{{customer.username}}</p>
-    <p>{{customer.mobileNumber}}</p>
-    <p>{{customer.address}}</p>
-    <p>{{customer.package_id}}</p>
-    <p>{{customer.type}}</p>
-    <button (click)="action(customer)">Action</button>
-</ng-container>
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Mobile Number</th>
+            <th>Address</th>
+            <th>Package</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of allCustomer">
+            <td>{{customer.username}}</td>
+            <td>{{customer.mobileNumber}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.package_id}}</td>
+            <td>{{customer.type}}</td>
+            <td><button class="btn btn-primary" (click)="action(customer)">Action</button> </td>
+        </tr>
+    </tbody>
+</table>

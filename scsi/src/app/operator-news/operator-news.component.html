@@ -2,16 +2,13 @@
 <div class="container" align="center">
     <button class="btn btn-primary" (click)="addNewNews()">Add new news</button>
 </div>
+<br>
 <div class="container">
-
-<ng-container *ngFor="let news of allNews">
-
-    <p class="news">{{news.heading}} <span class="timestamp">{{news.timestamp}}</span><br><hr>{{news.description}}<br> </p>
-
-    <!-- <p>{{news.description}}</p>
-        <p>{{news.description}}</p>
-        <p>{{news.timestamp}}</p> -->
-    
-
-</ng-container>
-
+    <ng-container *ngFor="let news of allNews">
+        <div class="container card">
+            <h2>{{news.heading}}</h2>
+            <p>{{news.description}}</p>
+        </div>
+        <br>
+    </ng-container>
+</div>

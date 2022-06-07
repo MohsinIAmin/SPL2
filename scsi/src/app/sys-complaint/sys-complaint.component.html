@@ -1,9 +1,35 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
-<p>Complaint</p>
-<ng-container *ngFor="let ticket of allTicket">
+<h1 class="title">Complaint List</h1>
+<hr>
+<table border="1px" class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let ticket of allTicket">
+
+            <td>{{ticket.customer_id}}</td>
+
+            <td>{{ticket.description}}</td>
+
+            <td>{{ticket.status}}</td>
+
+            <td><button class="btn btn-success" (click)="solve(ticket)">Solve</button></td>
+
+        </tr>
+    </tbody>
+
+</table>
+<!-- <ng-container *ngFor="let ticket of allTicket">
     <p>{{ticket.customer_id}}</p>
     <p>{{ticket.description}}</p>
     <p>{{ticket.status}}</p>
     <p>{{ticket.timestamp}}</p>
     <button (click)="solve(ticket)">Solve</button>
-</ng-container>
+</ng-container> -->

@@ -34,4 +34,8 @@ export class ComplaintComponent implements OnInit {
       );
   }
 
+  chat(){
+    this.router.navigate(['chat']);
+  }
+
 }

@@ -1,7 +1,30 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
-<p>{{ticketWorking.customer_id}}</p>
-<p>{{ticketWorking.description}}</p>
-<p>{{ticketWorking.status}}</p>
-<p>{{ticketWorking.timestamp}}</p>
-<button (click)="solve()">Solve</button>
-<button (click)="not_solve()">Not Solved</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <TH>Details</TH>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ticketWorking.customer_id}}</td>
+            <td>
+                <ul>
+                    <li>MobileNumber: {{customer.mobileNumber}}</li>
+                    <li>Address: {{customer.address}}</li>
+                    <li>Type: {{customer.type}}</li>
+                    <li>P_ID: {{ticketWorking.p_type}}</li>
+                </ul>
+            </td>
+            <td>{{ticketWorking.description}}</td>
+            <td>{{ticketWorking.status}}</td>
+            <td>{{ticketWorking.timestamp}}</td>
+            <td><button class="btn btn-success" (click)="solve()">Solve</button></td>
+            <td><button class="btn btn-warning" (click)="not_solve()">Not Solved</button></td>
+        </tr>
+    </tbody>
+</table>

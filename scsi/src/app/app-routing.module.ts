@@ -4,6 +4,7 @@ import { AccountComponent } from './account/account.component';
 import { AddPackageComponent } from './add-package/add-package.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { MessageComponent } from './message/message.component';
 import { NetPackageListComponent } from './net-package-list/net-package-list.component';
 import { NewsComponent } from './news/news.component';
 import { OperatorAccountComponent } from './operator-account/operator-account.component';
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent },
   { path: 'signup', component: SignupFormComponent },
   { path: 'login', component: LoginFormComponent },
+  { path: 'chat', component: MessageComponent },
   { path: 'syshome', component: SysAdminHomeComponent },
   { path: 'syspackages', component: SysPackagesComponent },
   { path: 'syscustomers', component: SysCustomersComponent },
