@@ -1,0 +1,38 @@
+<app-operator-navbar></app-operator-navbar>
+<h1 id="title">ChatBox</h1>
+<div class="container row ">
+    <div class="col-3">
+        <table>
+            <tr *ngFor="let customer of allCustomer">
+                <ul>
+                    <b>
+                        <li>
+
+                            <td (click)="chatCustomer(customer)">{{customer.username}}</td>
+
+                        </li>
+                    </b>
+                </ul>
+
+            </tr>
+        </table>
+    </div>
+    <div class="col-9" id="pan">
+        <div class="container">
+            <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+                <div class="list-group list-group-flush border-bottom scrollarea">
+                    <div class="list-group-item list-group-item-action py-3 lh-tight" *ngFor="let msg of customerMessages">
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <strong *ngIf="msg.type == 'sent'" class="mb-1">{{msg.customer_id}}</strong>
+                            <strong *ngIf="msg.type == 'receive'" class="mb-1">Operator</strong>
+                        </div>
+                        <div class="col-10 mb-1 small">{{msg.message}}</div>
+                    </div>
+                </div>
+            </div>
+            <form (submit)="send()">
+                <input class="form-control" placeholder="Write a message" [(ngModel)]="message" [ngModelOptions]="{standalone: true}" />
+            </form>
+        </div>
+    </div>
+</div>
