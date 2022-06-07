@@ -30,6 +30,7 @@ export class PackageService {
   setUpdatePackage(netPac: NetPackage) {
     this.netpacTobeUpdate = netPac;
   }
+
   getUpdatePackage() {
     return this.netpacTobeUpdate;
   }
@@ -43,4 +44,5 @@ export class PackageService {
         return NetPackage;
       }));
   }
+  
 }
