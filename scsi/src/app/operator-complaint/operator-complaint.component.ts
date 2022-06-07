@@ -24,11 +24,11 @@ export class OperatorComplaintComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate(['account']);
+          this.newTicket = new Ticket('', '', '', '', '', '');
+          this.router.navigate(['operatorcomplaint']);
         },
         error => {
-          alert('Package already exixt');
-          this.router.navigate(['account']);
+          this.router.navigate(['operatorcomplaint']);
         }
       );
   }

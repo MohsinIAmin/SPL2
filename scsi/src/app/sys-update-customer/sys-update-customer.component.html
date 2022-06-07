@@ -1,7 +1,29 @@
 <app-sys-admin-navbar></app-sys-admin-navbar>
-<p>{{updateCustomer.username}}</p>
-<p>{{updateCustomer.mobileNumber}}</p>
-<p>{{updateCustomer.address}}</p>
-<p>{{updateCustomer.package_id}}</p>
-<p>{{updateCustomer.type}}</p>
-<button (click)="save()">Save</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>MobileNumber</th>
+            <th>Address</th>
+            <th>Package</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{updateCustomer.username}}</td>
+            <td>{{updateCustomer.mobileNumber}}</td>
+            <td>{{updateCustomer.address}}</td>
+            <td>{{updateCustomer.package_id}}</td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" [(ngModel)]="activate" [ngModelOptions]="{standalone: true}">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Activate
+                    </label>
+                </div>
+            </td>
+            <td><button class="btn btn-primary" (click)="save()">Save</button></td>
+        </tr>
+    </tbody>
+</table>

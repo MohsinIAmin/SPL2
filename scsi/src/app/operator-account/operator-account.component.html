@@ -1,6 +1,15 @@
 <app-operator-navbar></app-operator-navbar>
-<h1>User account</h1>
-<ul>
-    <li>Username: {{operatoraccount.username}}</li>
-    <li>Mobile Number: {{operatoraccount.mobileNumber}}</li>
-</ul>
+<h1 class="title">User account</h1>
+<div class="information row">
+
+    <div class="col-6">
+        <ul>
+            <li>Username: {{operatoraccount.username}}</li>
+            <li>Mobile Number: {{operatoraccount.mobileNumber}}</li>
+            <li>Job Id: {{operatoraccount.jobId}}</li>
+        </ul>
+    </div>
+    <div class="col-6 image">
+        <img src="../../assets/1.png" alt="" height="300px">
+    </div>
+</div>

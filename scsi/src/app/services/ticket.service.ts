@@ -43,4 +43,12 @@ export class TicketService {
         return Ticket;
       }));
   }
+
+  getCustomerTicket(cusername : string) {
+    let username = cusername;
+    return this.http.post<any>(`${environment.apiUrl}/getcustomerticket.php`, { username })
+      .pipe(map(Ticket => {
+        return Ticket;
+      }));
+  }
 }

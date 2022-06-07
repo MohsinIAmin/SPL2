@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
 import { Customer } from '../models/customer';
+import { Ticket } from '../models/ticket';
 import { CustomerAccountService } from '../services/customer-account.service';
+import { TicketService } from '../services/ticket.service';
 
 @Component({
   selector: 'app-account',
@@ -11,12 +13,15 @@ import { CustomerAccountService } from '../services/customer-account.service';
 })
 export class AccountComponent implements OnInit {
 
-  constructor(private customerService: CustomerAccountService) { }
+  allTicket: Ticket[] = [];
+
+  constructor(private customerService: CustomerAccountService,private ticketService: TicketService) { }
 
   customer = new Customer('', '', '', '', '', '');
 
   ngOnInit(): void {
     this.getCustomer();
+    this.getAllTicket();
   }
 
   getCustomer() {
@@ -30,5 +35,14 @@ export class AccountComponent implements OnInit {
           console.log(this.customer);
         }
       )
+  }
+
+  getAllTicket() {
+    this.ticketService.getAllTicket()
+      .subscribe(response => {
+        this.allTicket = response.map(item => {
+          return new Ticket(item.customer_id, item.p_type, item.description, item.timestamp, item.status, item.ticket_id);
+        });
+      });
   }
 }

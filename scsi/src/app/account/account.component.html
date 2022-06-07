@@ -2,16 +2,40 @@
 
 <h1 class="title">User account</h1>
 <div class="information row">
-<div class="col-6 ">
-<ul>
-    <li>Username: {{customer.username}}</li>
-    <li>Mobile Number: {{customer.mobileNumber}}</li>
-    <li>Address: {{customer.address}}</li>
-    <li>Package: {{customer.package_id}}</li>
-    <li>Status: {{customer.type}}</li>
-</ul>
+    <div class="col-6 ">
+        <ul>
+            <li>Username: {{customer.username}}</li>
+            <li>Mobile Number: {{customer.mobileNumber}}</li>
+            <li>Address: {{customer.address}}</li>
+            <li>Package: {{customer.package_id}}</li>
+            <li>Status: {{customer.type}}</li>
+        </ul>
+    </div>
+    <div class="col-6 image">
+        <img src="../../assets/1.png" alt="" height="300px">
+    </div>
 </div>
-<div class="col-6 image">
-    <img src="../../assets/1.png" alt="" height="300px" >
-</div>
-</div>
+
+<p>Tickets</p>
+<table border="1px" class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let ticket of allTicket">
+
+            <td>{{ticket.ticket_id}}</td>
+
+            <td>{{ticket.description}}</td>
+
+            <td>{{ticket.status}}</td>
+
+        </tr>
+    </tbody>
+
+</table>

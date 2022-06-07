@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { Customer } from '../models/customer';
+import { CustomerAccountService } from '../services/customer-account.service';
 import { TicketService } from '../services/ticket.service';
 
 @Component({
@@ -11,13 +13,27 @@ import { TicketService } from '../services/ticket.service';
 export class SysSolveTicketComponent implements OnInit {
 
   ticketWorking = this.ticketService.getWorkingTicket();
-  constructor(private ticketService: TicketService, private router: Router) { }
+  customer = new Customer('', '', '', '', '', '');
+  constructor(private ticketService: TicketService, private router: Router, private customerService: CustomerAccountService) { }
 
   ngOnInit(): void {
+    this.customer.username = this.ticketWorking.customer_id;
+    this.getCustomer();
+  }
+
+  getCustomer() {
+    this.customerService.getUser(this.customer.username)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.customer = data[0];
+          console.log(this.customer);
+        }
+      )
   }
 
   solve() {
-      this.ticketService.updateTicket('solved')
+    this.ticketService.updateTicket('solved')
       .pipe(first())
       .subscribe(
         data => {
@@ -29,7 +45,7 @@ export class SysSolveTicketComponent implements OnInit {
       );
     this.router.navigate(['syscomplaint']);
   }
-  
+
   not_solve() {
     this.ticketService.updateTicket('pending')
       .pipe(first())

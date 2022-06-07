@@ -26,4 +26,9 @@ export class SysAdminHomeComponent implements OnInit {
       });
   }
 
+  updatePackage(netPac: NetPackage): void {
+    this.packageService.setUpdatePackage(netPac);
+    this.router.navigate(['updatepackage']);
+  }
+
 }
