@@ -12,15 +12,18 @@ if (isset($postdata) && !empty($postdata)) {
     $customer_id = mysqli_real_escape_string($mysqli, trim($data->customer_id));
     $message = mysqli_real_escape_string($mysqli, trim($data->message));
     $timestamp = mysqli_real_escape_string($mysqli, trim($data->timestamp));
+    $type = mysqli_real_escape_string($mysqli, trim($data->type));
 
-    $sql = "INSERT INTO message(customer_id,message,timestamp) VALUES ('{$customer_id}','{$message}','{$timestamp}')";
+    $sql = "INSERT INTO message(customer_id,message,timestamp,type) VALUES ('{$customer_id}','{$message}','{$timestamp}','{$type}')";
     if ($mysqli->query($sql) === TRUE) {
         $data = [
             'customer_id' => $customer_id,
             'message' => $message,
-            'timestamp' => $timestamp
+            'timestamp' => $timestamp,
+            'type' => $type
         ];
 
+        echo json_encode($data);
         $options = array(
             'cluster' => 'ap2',
             'useTLS' => true
@@ -34,7 +37,6 @@ if (isset($postdata) && !empty($postdata)) {
         );
 
         $pusher->trigger('my-channel', 'my-event', $data);
-        
     } else {
         http_response_code(404);
     }

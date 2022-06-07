@@ -42,6 +42,9 @@ import { SysUpdatePackageComponent } from './sys-update-package/sys-update-packa
 import { SysSolveTicketComponent } from './sys-solve-ticket/sys-solve-ticket.component';
 import { SysUpdateCustomerComponent } from './sys-update-customer/sys-update-customer.component';
 import { MessageComponent } from './message/message.component';
+import { OperatorChatComponent } from './operator-chat/operator-chat.component';
+import { SignalingService } from './services/signaling.service';
+import { CallService } from './services/call.service';
 
 
 @NgModule({
@@ -80,7 +83,8 @@ import { MessageComponent } from './message/message.component';
     SysUpdatePackageComponent,
     SysSolveTicketComponent,
     SysUpdateCustomerComponent,
-    MessageComponent
+    MessageComponent,
+    OperatorChatComponent
   ],
   imports: [
     BrowserModule,
@@ -89,9 +93,12 @@ import { MessageComponent } from './message/message.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    SignalingService,
+    CallService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

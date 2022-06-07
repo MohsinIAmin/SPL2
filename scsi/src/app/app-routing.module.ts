@@ -9,6 +9,7 @@ import { NetPackageListComponent } from './net-package-list/net-package-list.com
 import { NewsComponent } from './news/news.component';
 import { OperatorAccountComponent } from './operator-account/operator-account.component';
 import { OperatorAddNewsComponent } from './operator-add-news/operator-add-news.component';
+import { OperatorChatComponent } from './operator-chat/operator-chat.component';
 import { OperatorComplaintComponent } from './operator-complaint/operator-complaint.component';
 import { OperatorHomeComponent } from './operator-home/operator-home.component';
 import { OperatorLoginComponent } from './operator-login/operator-login.component';
@@ -59,7 +60,8 @@ const routes: Routes = [
   { path: 'operatoraccount', component: OperatorAccountComponent },
   { path: 'operatorsignup', component: OperatorSignupComponent },
   { path: 'operatorlogin', component: OperatorLoginComponent },
-  { path: 'addnews', component: OperatorAddNewsComponent }
+  { path: 'addnews', component: OperatorAddNewsComponent },
+  { path: 'operatorchat', component: OperatorChatComponent }
 ];
 
 @NgModule({

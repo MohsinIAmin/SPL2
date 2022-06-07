@@ -12,7 +12,7 @@ import { TicketService } from '../services/ticket.service';
 export class OperatorComplaintComponent implements OnInit {
 
   newTicket = new Ticket('', '', '', '', '', '');
-  
+
   constructor(private ticketService: TicketService, private router: Router) { }
 
   ngOnInit(): void {
@@ -31,6 +31,10 @@ export class OperatorComplaintComponent implements OnInit {
           this.router.navigate(['operatorcomplaint']);
         }
       );
+  }
+
+  chat() {
+    this.router.navigate(['operatorchat']);
   }
 
 }

@@ -1,9 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import Pusher from 'pusher-js';
 import { first, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Message } from '../models/message';
+import { MessageService } from '../services/message.service';
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 
 @Component({
   selector: 'app-message',
@@ -12,10 +17,14 @@ import { Message } from '../models/message';
 })
 export class MessageComponent implements OnInit {
 
+  // @ViewChild('remoteVideo') remoteVideo!: ElementRef;
   messages: any = [];
-  customer_id = String(localStorage.getItem('token'));
+  customer_id: string = String(localStorage.getItem('token'));
   message = '';
-  constructor(private http: HttpClient) { }
+  customerMessages: any = [];
+
+  constructor(private http: HttpClient,
+    private messageService: MessageService) { }
 
   ngOnInit(): void {
 
@@ -29,18 +38,43 @@ export class MessageComponent implements OnInit {
     const channel = pusher.subscribe('my-channel');
 
     channel.bind('my-event', (data: Message) => {
-      console.log(data);
-      this.messages.push(data);
+      // this.messages.push(data);
     });
+
+    this.getAllChat();
+    console.log(this.messages);
+
+    // this.signalingService
+    //   .getMessages()
+    //   .subscribe((payload) => this._handleMessage(payload));
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBurRNmPDdkkCX-jCE2XOGrohbIX66VFQY",
+      authDomain: "scsi-d5247.firebaseapp.com",
+      projectId: "scsi-d5247",
+      storageBucket: "scsi-d5247.appspot.com",
+      messagingSenderId: "459413371223",
+      appId: "1:459413371223:web:7d3d8e2eb3218e266ba612",
+      measurementId: "G-ZZB53YWTF0"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
   }
 
   send(): void {
+    if (this.message == '') {
+      return;
+    }
     this.submit()
       .pipe(first())
       .subscribe(
         data => {
-          this.message = '';
           console.log(data);
+          this.messages.push(data);
+          this.message = '';
         }
       );
   }
@@ -49,10 +83,46 @@ export class MessageComponent implements OnInit {
     return this.http.post(`${environment.apiUrl}/message.php`, {
       customer_id: this.customer_id,
       message: this.message,
-      timestamp: String(Date.now())
+      timestamp: String(Date.now()),
+      type: 'sent'
     }).pipe(map(Message => {
       return Message;
     }));
   }
+
+  getAllChat() {
+    this.messageService.getCustomerChat()
+      .subscribe(response => {
+        this.messages = response.map(item => {
+          return new Message(item.customer_id, item.message, item.timestamp, item.type);
+        });
+        this.customerMessages = this.messages.filter(function (mess: any) {
+          return mess.customer_id == String(localStorage.getItem('token'));
+        });
+      });
+  }
+
+  public async makeCall(): Promise<void> {
+    // await this.callService.makeCall(this.remoteVideo);
+  }
+
+  // private async _handleMessage(data: any): Promise<void> {
+  //   switch (data.type) {
+  //     case 'offer':
+  //       await this.callService.handleOffer(data.offer, this.remoteVideo);
+  //       break;
+
+  //     case 'answer':
+  //       await this.callService.handleAnswer(data.answer);
+  //       break;
+
+  //     case 'candidate':
+  //       this.callService.handleCandidate(data.candidate);
+  //       break;
+
+  //     default:
+  //       break;
+  //   }
+  // }
 
 }

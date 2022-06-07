@@ -14,7 +14,7 @@ import { TicketService } from '../services/ticket.service';
 export class AccountComponent implements OnInit {
 
   allTicket: Ticket[] = [];
-
+  allTickets: Ticket[] = [];
   constructor(private customerService: CustomerAccountService,private ticketService: TicketService) { }
 
   customer = new Customer('', '', '', '', '', '');
@@ -22,6 +22,7 @@ export class AccountComponent implements OnInit {
   ngOnInit(): void {
     this.getCustomer();
     this.getAllTicket();
+    console.log(this.customer);
   }
 
   getCustomer() {
@@ -32,7 +33,6 @@ export class AccountComponent implements OnInit {
       .subscribe(
         data => {
           this.customer = data[0];
-          console.log(this.customer);
         }
       )
   }
@@ -43,6 +43,10 @@ export class AccountComponent implements OnInit {
         this.allTicket = response.map(item => {
           return new Ticket(item.customer_id, item.p_type, item.description, item.timestamp, item.status, item.ticket_id);
         });
+        this.allTickets = this.allTicket.filter(function(tic){
+          return tic.customer_id == String(localStorage.getItem('token'));
+        });
       });
+      
   }
 }

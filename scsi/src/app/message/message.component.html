@@ -9,7 +9,8 @@
         <div class="list-group list-group-flush border-bottom scrollarea">
             <div class="list-group-item list-group-item-action py-3 lh-tight" *ngFor="let msg of messages">
                 <div class="d-flex w-100 align-items-center justify-content-between">
-                    <strong class="mb-1">{{msg.username}}</strong>
+                    <strong *ngIf="msg.type == 'sent'" class="mb-1">{{msg.customer_id}}</strong>
+                    <strong *ngIf="msg.type == 'receive'" class="mb-1">Operator</strong>
                 </div>
                 <div class="col-10 mb-1 small">{{msg.message}}</div>
             </div>
@@ -18,4 +19,11 @@
     <form (submit)="send()">
         <input class="form-control" placeholder="Write a message" [(ngModel)]="message" [ngModelOptions]="{standalone: true}" />
     </form>
+</div>
+<div class="d-flex flex-column justify-content-center align-items-center h-100">
+    <div class="d-flex flex-column mb-3">
+        <video #remoteVideo controls autoplay></video>
+        <button class="btn btn-primary m-3" (click)="makeCall()">Init call</button>
+    </div>
+    <br>
 </div>

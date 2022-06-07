@@ -39,7 +39,6 @@ export class NetPackageListComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          console.log(data);
           this.router.navigate(['account']);
         },
         error => {
@@ -58,7 +57,6 @@ export class NetPackageListComponent implements OnInit {
       .subscribe(
         data => {
           this.customer = data[0];
-          console.log(this.customer);
         }
       )
   }
