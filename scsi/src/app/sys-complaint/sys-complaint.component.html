@@ -7,7 +7,7 @@
             <th>ID</th>
             <th>Description</th>
             <th>Status</th>
-            <th>Timestamp</th>
+            <th>Action</th>
         </tr>
     </thead>
 
@@ -20,7 +20,7 @@
 
             <td>{{ticket.status}}</td>
 
-            <td><button class="btn btn-success" (click)="solve(ticket)">Solve</button></td>
+            <td><button *ngIf="ticket.status != 'solved'"class="btn btn-success" (click)="solve(ticket)">Solve</button></td>
 
         </tr>
     </tbody>

@@ -8,6 +8,7 @@ import { MessageService } from '../services/message.service';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,7 +25,8 @@ export class MessageComponent implements OnInit {
   customerMessages: any = [];
 
   constructor(private http: HttpClient,
-    private messageService: MessageService) { }
+    private messageService: MessageService,
+    private router:Router) { }
 
   ngOnInit(): void {
 
@@ -39,6 +41,7 @@ export class MessageComponent implements OnInit {
 
     channel.bind('my-event', (data: Message) => {
       // this.messages.push(data);
+      this.getAllChat();
     });
 
     this.getAllChat();
@@ -102,7 +105,8 @@ export class MessageComponent implements OnInit {
       });
   }
 
-  public async makeCall(): Promise<void> {
+  public makeCall(): void {
+    this.router.navigate(['call']);
     // await this.callService.makeCall(this.remoteVideo);
   }
 

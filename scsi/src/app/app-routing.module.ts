@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { AddPackageComponent } from './add-package/add-package.component';
+import { CallComponent } from './call/call.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { MessageComponent } from './message/message.component';
@@ -9,6 +10,7 @@ import { NetPackageListComponent } from './net-package-list/net-package-list.com
 import { NewsComponent } from './news/news.component';
 import { OperatorAccountComponent } from './operator-account/operator-account.component';
 import { OperatorAddNewsComponent } from './operator-add-news/operator-add-news.component';
+import { OperatorCallComponent } from './operator-call/operator-call.component';
 import { OperatorChatComponent } from './operator-chat/operator-chat.component';
 import { OperatorComplaintComponent } from './operator-complaint/operator-complaint.component';
 import { OperatorHomeComponent } from './operator-home/operator-home.component';
@@ -42,6 +44,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupFormComponent },
   { path: 'login', component: LoginFormComponent },
   { path: 'chat', component: MessageComponent },
+  {path:'call',component:CallComponent},
   { path: 'syshome', component: SysAdminHomeComponent },
   { path: 'syspackages', component: SysPackagesComponent },
   { path: 'syscustomers', component: SysCustomersComponent },
@@ -61,7 +64,8 @@ const routes: Routes = [
   { path: 'operatorsignup', component: OperatorSignupComponent },
   { path: 'operatorlogin', component: OperatorLoginComponent },
   { path: 'addnews', component: OperatorAddNewsComponent },
-  { path: 'operatorchat', component: OperatorChatComponent }
+  { path: 'operatorchat', component: OperatorChatComponent },
+  {path:'operatorcall',component:OperatorCallComponent}
 ];
 
 @NgModule({

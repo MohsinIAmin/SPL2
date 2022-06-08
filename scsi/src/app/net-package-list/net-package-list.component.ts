@@ -33,7 +33,9 @@ export class NetPackageListComponent implements OnInit {
   }
 
   updateUser(netPack :string){
+    console.log(this.customer);
     this.customer.package_id = netPack;
+    this.customer.type = 'deactive';
     console.log(this.customer);
     this.customerService.updateUser(this.customer)
       .pipe(first())
@@ -43,7 +45,6 @@ export class NetPackageListComponent implements OnInit {
         },
         error => {
           console.log(error);
-          alert('Package cannot updated');
           this.router.navigate(['account']);
         }
       );

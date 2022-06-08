@@ -45,6 +45,8 @@ import { MessageComponent } from './message/message.component';
 import { OperatorChatComponent } from './operator-chat/operator-chat.component';
 import { SignalingService } from './services/signaling.service';
 import { CallService } from './services/call.service';
+import { CallComponent } from './call/call.component';
+import { OperatorCallComponent } from './operator-call/operator-call.component';
 
 
 @NgModule({
@@ -84,7 +86,9 @@ import { CallService } from './services/call.service';
     SysSolveTicketComponent,
     SysUpdateCustomerComponent,
     MessageComponent,
-    OperatorChatComponent
+    OperatorChatComponent,
+    CallComponent,
+    OperatorCallComponent
   ],
   imports: [
     BrowserModule,

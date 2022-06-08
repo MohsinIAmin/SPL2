@@ -37,7 +37,6 @@ export class SysUpdateCustomerComponent implements OnInit {
         },
         error => {
           console.log(error);
-          alert('Package cannot updated');
           this.router.navigate(['syscustomers']);
         }
       );

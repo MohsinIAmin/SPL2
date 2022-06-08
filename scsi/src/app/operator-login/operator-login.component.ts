@@ -25,7 +25,6 @@ export class OperatorLoginComponent implements OnInit {
         data => {
           localStorage.setItem('token', data[0].username);
           this.router.navigate(['operatorhome']);
-          alert('log in successsfully');
         },
         error => {
           alert('user name and password wrong');

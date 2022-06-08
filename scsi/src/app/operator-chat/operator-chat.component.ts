@@ -36,6 +36,8 @@ export class OperatorChatComponent implements OnInit {
 
     channel.bind('my-event', (data: Message) => {
       // this.messages.push(data);
+      this.getAllChat();
+      this.chatCustomer(this.customer);
     });
 
     this.getAllCustomer();
@@ -96,5 +98,12 @@ export class OperatorChatComponent implements OnInit {
     }).pipe(map(Message => {
       return Message;
     }));
+  }
+
+  takeCall(){
+    if(this.customer.username == ''){
+      return;
+    }
+    this.router.navigate(['operatorcall']);
   }
 }
